@@ -1,0 +1,107 @@
+.footertitle{
+    color: black;
+    text-align: left;
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 3rem 0 3rem 4rem;
+    
+    
+}
+.newstitle{
+    color: black;
+    text-align: left;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 3rem 0 3rem 4rem;
+}
+.subtext{
+    text-align: center;
+    font-size:1.3rem ;
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+ }
+.footerhr{
+    width: 9    0%; /* or any specific length */
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin: 2rem auto; /* centers the line */
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+.column:not(:last-child):after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+}
+.subscribe-container {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    flex: 1;
+}
+
+.subbtn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    background: none;
+    cursor: pointer;
+}
+
+#thankYouMessage {
+    margin-left: 15px;
+    color: #000;
+    font-weight: bold;
+}
+@media (max-width:600px) {
+    .subscribe-container {
+        
+        margin-left: 2rem;
+      
+    }
+}
+

@@ -1,0 +1,146 @@
+.subtext{
+   text-align: center;
+   font-size:1.3rem ;
+   font-family: "Josefin Slab", serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+}
+.titletext{
+    color: white;
+    text-align: center;
+    font-size: 90px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.item-2{
+   color:white;
+   background-color: black;
+   padding-top: 13%;
+   
+}
+.photo-1{
+    padding-top: 20%;
+    width:20rem;
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo-2{
+    padding-top: 13rem;
+    width: 15rem;
+}
+.photo-3{
+    width: 27rem;
+    padding-top: 10%;
+    
+}
+.item-3{
+    text-align: center;
+}
+.item-4{
+    align-items: center;
+    text-align: center;
+}
+.servicestext{
+    color: black;
+    text-align: left;
+    font-size: 90px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 5rem;
+    /* margin-bottom: 2rem; */
+}
+
+.welcome-page{
+    background-color: black;
+}
+
+.mega {
+    overflow-x: hidden;
+  }
+  
+.card{
+    width: 20rem;
+    background-color: black;
+    color: white;
+    
+}
+
+#pricing {
+    padding: 4% 10%;
+    margin-left: 4%;
+    
+}
+
+/* #cta {
+    background-color: #ef8172;
+    text-align: center;
+    padding: 3% 0;
+} */
+p{
+    margin-bottom: 0px;
+}
+.pricebtn{
+    border-radius: 0%;
+}
+.card-body{
+    padding: 0%;
+}
+#Services{
+    background-color: white;
+
+}
+
+.servicehr{
+    width: 90%; /* or any specific length */
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin: 3.5rem auto; /* centers the line */
+    opacity: 1;
+}
+.text{
+    text-align:center;
+    font-size:1.5rem ;
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #000;
+}
+@media (max-width: 600px) {
+    .titletext {
+        font-size: 50px;
+    }
+    .photo-1{
+        width: 10rem;
+        padding-top: 6%;
+        padding-left: 0%;
+    }
+    .photo-2{
+        padding-top: 0rem;
+        margin-right: 4rem;
+        width: 0rem;
+    }
+    .item-3{
+        text-align:right;
+    }
+    .card{
+        margin-left: 10%;
+    
+    }
+    .servicestext{
+        text-align: center;
+        margin-left: 0rem;
+    }
+    #pricing{
+        margin-left: 0%;
+    }
+}
+
+
