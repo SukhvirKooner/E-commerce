@@ -16,7 +16,10 @@ body {
   font-weight: 800;
   font-style: normal;
 }
-
+svg{
+  width: 25px;
+  height: 25px;
+}
 
 
 .nav-items{

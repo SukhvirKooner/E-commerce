@@ -1,0 +1,15 @@
+.card{
+    width: 20rem;
+    background-color: black;
+    color: white;
+    
+}
+.pricebtn{
+    border-radius: 0%;
+}
+.card-body{
+    padding: 0%;
+}
+p{
+    margin-bottom: 0px;
+}

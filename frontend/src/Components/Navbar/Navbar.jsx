@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png"
+import { CiLogin } from "react-icons/ci";
 const Navbar = () =>{
     return(
       <body>
@@ -14,16 +15,16 @@ const Navbar = () =>{
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav ms-auto nav-items">
                     <li >
-                        <a className="nav-link navstyle" styles="color:white;" href="">Home</a>
+                        <a className="nav-link navstyle" styles="color:white;" href="\">Home</a>
                     </li>
                     <li >
-                        <a className="nav-link navstyle" href="">Custom PC</a>
+                        <a className="nav-link navstyle" href="\custom">Custom PC</a>
                     </li>
                     <li >
-                        <a className="nav-link navstyle" href="">Shop</a>
+                        <a className="nav-link navstyle" href="\shop">Shop</a>
                     </li>
                     <li >
-                        <a className="nav-link navstyle" href=""></a>
+                        <a className="nav-link navstyle login" href="\login"><CiLogin /></a>
                     </li>
                 </ul>
             </div>

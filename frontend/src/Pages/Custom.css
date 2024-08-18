@@ -1,0 +1,54 @@
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    font-family: "Times New Roman", serif;
+    color: #000;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-container .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: transparent;
+    color: #000;
+}
+
+.form-container input::placeholder {
+    color: #000;
+    opacity: 0.6;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #f0f0f0;
+}
+.custom{
+    margin-top: 10%;
+    margin-bottom: 40%;
+}
