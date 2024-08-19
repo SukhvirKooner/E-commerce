@@ -5,7 +5,7 @@ function Footer() {
         <footer>
             <div className='footertitle'>CYBERFORGE</div>
             
-        <div class="container">
+        <div class="container container-1">
         <div class="column">
         <p className='subtext'>123-456-7890</p>
         <p className='subtext'>info@mysite.com</p>

@@ -1,12 +1,19 @@
 import React from 'react'
 import "./Home.css"
+import { useNavigate } from 'react-router-dom';
 import leftimg from "../Components/Assets/photo-1.jpg"
 import rightimg from "../Components/Assets/3.jpg"
 import btmimg from "../Components/Assets/6.png"
 import card1 from "../Components/Assets/card1.png"
 import card2 from "../Components/Assets/card2.png"
 import card3 from "../Components/Assets/card3.png"
+
 function Home() {
+    const navigate = useNavigate();
+    const loadMore = () => {
+        navigate('/shop');
+    };
+
     return (
         <div className='mega'>
         <div className=' welcome-page'>
@@ -66,7 +73,7 @@ function Home() {
                 </div>
                 </div>
             </div>
-            <div className='col-lg-12'><button  className="pricebtn btn btn-outline-light btn-lg subtext" type="button">Load More!</button></div>
+            <div className='col-lg-12'><button onClick={loadMore}  className="pricebtn btn btn-outline-light btn-lg subtext" type="button">Load More!</button></div>
             </div>
 
 

@@ -1,13 +1,13 @@
 import React from 'react'
-import "./item.css"
+import "./Item.css"
+import card1 from "../Assets/card1.png"
 function Item(props) {
     return (
-        <div class="col-lg-4 col-md-6 mb-4 ">
-                <div class="card">
-                <img class="card-img-top" src={card1} alt="Card image cap"/>
+        <div class=" mb-4 ">
+                <div class="item">
+                <img class="card-img-top" src={props.img} alt="Card image cap"/>
                 <div class="card-body d-grid gap-2">
-                    
-                <button  class="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooling System  </p> <p>$150.00</p></button>
+                <button  class="pricebtn btn btn-lg subtext" type="button"> <p>{props.name}</p> <p>${props.price}</p></button>
                 </div>
                 </div>  
             </div>

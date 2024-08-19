@@ -1,0 +1,48 @@
+/* src/CustomScrollbar.css */
+
+/* Scrollbar for light backgrounds */
+.light-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.light-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Scrollbar for dark backgrounds */
+.dark-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ddd;
+}
+
+/* For Mozilla Firefox */
+.light-scrollbar {
+    scrollbar-color: #333 #f1f1f1;
+}
+
+.dark-scrollbar {
+    scrollbar-color: #f1f1f1 #333;
+}

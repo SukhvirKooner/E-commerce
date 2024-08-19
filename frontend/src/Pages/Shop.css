@@ -1,0 +1,28 @@
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.product-card h5 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.product-card p {
+    margin: 0;
+    /* font-weight: bold; */
+}
+.subtext{
+    text-align: left;
+}
+.product-image{
+    width: 250px;
+}
