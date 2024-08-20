@@ -7,54 +7,14 @@ import p6_img from "./item6.png"
 import p7_img from "./item7.png"
 import p8_img from "./item8.png"
 
-let products= [
-    {
-        id:1,
-        name:"Liquid Cooling System",
-        image:p1_img,
-        price:100
-    },
-    {
-        id:2,
-        name:"SSD - 1TB",
-        image:p2_img,
-        price:100
-    },
-    {
-        id:3,
-        name:"Graphics Card - 8GB",
-        image:p3_img,
-        price:100
-    },
-    {
-        id:4,
-        name:"Gaming Headset with Mic",
-        image:p4_img,
-        price:100
-    },
-    {
-        id:5,
-        name:"Wireless Gaming Mouse",
-        image:p5_img,
-        price:100
-    },
-    {
-        id:6,
-        name:"Mechanical Gaming Keyboard",
-        image:p6_img,
-        price:100
-    },
-    {
-        id:7,
-        name:"Workstation Pro PC",
-        image:p7_img,
-        price:100
-    },
-    {
-        id:8,
-        name:"Gaming Beast PC",
-        image:p8_img,
-        price:100
-    }
-]
-export default products;
+const initialProducts = [
+    { id: 1,image: p1_img , name: 'Liquid Cooling System', type: 'pc-components', price: 100 },
+    { id: 2,image: p2_img , name: 'SSD - 1TB', type: 'pc-components', price: 100 },
+    { id: 3,image: p3_img , name: 'Graphics Card - 8GB', type: 'pc-components', price: 500 },
+    { id: 4,image: p4_img , name: 'Gaming Headset with Mic', type: 'gaming-peripherals', price: 60   },
+    { id: 5,image: p5_img , name: 'Wireless Gaming Mouse', type: 'gaming-peripherals', price: 50 },
+    { id: 6,image: p6_img , name: 'Mechanical Gaming Keyboard', type: 'aming-peripherals', price: 120 },
+    { id: 7,image: p7_img , name: 'Workstation Pro PC', type: 'custom-pcs', price: 1400 },
+    { id: 8,image: p8_img , name: 'Gaming Beast PC', type: 'custom-pcs', price: 2000 }
+];
+export default initialProducts;

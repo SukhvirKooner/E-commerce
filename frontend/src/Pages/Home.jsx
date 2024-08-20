@@ -23,7 +23,7 @@ function Home() {
             <img className='img-fluid photo-1' src={leftimg} alt="photo-1" />
             </div>
             <div className='col-lg-6 item-2'>
-            <div className='subtext'>Tech Heaven</div>
+            <div className='subtext' style={{textAlign:"center"}}>Tech Heaven</div>
             <div className='titletext'>EMPOWERING </div>
             <div className='titletext'> GAMERS</div>
             
