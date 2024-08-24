@@ -1,4 +1,3 @@
-// src/FilterBar.js
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './FilterBar.css'; // Optional for additional styling

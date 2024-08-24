@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "./Custom.css"
+import "./CSS/Custom.css"
 const ChatGPTForm = () => {
   const [budget, setBudget] = useState('');
   const [useCase, setUseCase] = useState('');
@@ -29,29 +29,15 @@ const ChatGPTForm = () => {
 
   return (
 
-//     <div class="container form-container">
-//     <form action="#" method="post" class="form-inline">
-//         <div class="form-group mb-3">
-//             <label for="budget" class="sr-only">Your Budget:</label>
-//             <input type="text" id="budget" name="budget" class="form-control" placeholder="Enter your budget">
-//         </div>
 
-//         <div class="form-group mb-3">
-//             <label for="usecase" class="sr-only">Your Use Case:</label>
-//             <input type="text" id="usecase" name="usecase" class="form-control" placeholder="Enter your use case">
-//         </div>
-
-//         <button type="submit" class="btn btn-outline-dark">Submit</button>
-//     </form>
-// </div>
 
 
 
     <div className="container form-container custom">
-      <h2>PC Component Suggestion Form</h2>
+      <h2 className='custom-title'>PC Component Suggestion Form</h2>
       <form className='form-inline' onSubmit={handleSubmit}>
         <div className="form-group mb-3">
-          <label  htmlFor="budget">Budget:</label>
+          <label className='text'  htmlFor="budget">Budget:</label>
           <input
             type="number"
             id="budget"
@@ -62,7 +48,7 @@ const ChatGPTForm = () => {
           />
         </div>
         <div className="form-group mb-3">
-          <label  htmlFor="useCase">Use Case:</label>
+          <label className='text'  htmlFor="useCase">Use Case:</label>
           <input
             type="text"
             id="useCase"
@@ -72,7 +58,7 @@ const ChatGPTForm = () => {
             className="form-control"
           />
         </div>
-        <button type="submit" className="btn btn-outline-dark" disabled={loading} style={{borderRadius:"0px"}}>
+        <button type="submit" className="pricebtn btn btn-outline-dark btn-lg text" disabled={loading} style={{borderRadius:"0px"}}>
           {loading ? 'Loading...' : 'Submit'}
         </button>
       </form>

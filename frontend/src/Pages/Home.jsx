@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Home.css"
+import "./CSS/Home.css"
 import { useNavigate } from 'react-router-dom';
 import leftimg from "../Components/Assets/photo-1.jpg"
 import rightimg from "../Components/Assets/3.jpg"
@@ -41,22 +41,22 @@ function Home() {
             
         <section id="pricing">
 
-            <div class="row  text-center">
+            <div className="row  text-center">
 
-            <div class="col-lg-4 col-md-6 mb-4 ">
-                <div class="card">
-                <img class="card-img-top" src={card1} alt="Card image cap"/>
-                <div class="card-body d-grid gap-2">
+            <div className="col-lg-4 col-md-6 mb-4 ">
+                <div className="card">
+                <image className="card-img-top" src={card1} alt="Card image cap"/>
+                <div className="card-body d-grid gap-2">
                     
-                    <button  class="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooling System  </p> <p>$150.00</p></button>
+                    <button  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooling System  </p> <p>$150.00</p></button>
                 </div>
                 </div>  
             </div>
 
 
-            <div class="  col-lg-4 col-md-6 mb-4  ">
-                <div class="card">
-                <img class="card-img-top" src={card2} alt="Card image cap"/>
+            <div className="  col-lg-4 col-md-6 mb-4  ">
+                <div className="card">
+                <image className="card-img-top" src={card2} alt="Card image cap"/>
                     <div className="card-body  d-grid gap-2">
 
                     <button  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"><p> SSD-1TB </p> <p>$150.00</p></button>
@@ -66,7 +66,7 @@ function Home() {
             
             <div class="col-lg-4 col-md-12 mb-3 ">
                 <div className="card">
-                <img className="card-img-top" src={card3} alt="Card image cap"/>
+                <image className="card-img-top" src={card3} alt="Card image cap"/>
                 <div className="card-body d-grid gap-2">
                     
                 <button className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p> Graphic Card-8GB </p> <p>$150.00</p> </button>

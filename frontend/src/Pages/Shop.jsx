@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./Shop.css"
+import "./CSS/Shop.css"
 
 import React, { useState } from 'react';
 import FilterBar from '../Components/filter/FilterBar.jsx';
@@ -9,13 +9,10 @@ import initialProducts from '../Components/Assets/data.js';
 
 
 
-//custom-pcs
-//pc-components
-//gaming-peripherals
 
 
 function Shop() {
-    const [filters, setFilters] = useState({});
+    const [filter, setFilters] = useState({});
     const [products, setProducts] = useState(initialProducts);
 
     const handleFilter = (filters) => {
