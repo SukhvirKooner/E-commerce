@@ -1,9 +1,15 @@
-import React from 'react'
+import {React,  useContext} from 'react';   
+import { ShopContext } from '../Context/ShopContext';
+import { useParams } from 'react-router-dom';
 
-function Product() {
-    return (
-        <div>
-            <h1>PRODUCTS</h1>
+const Product = () =>{
+    
+    const {initialProducts}= useContext(ShopContext);
+    const {productId} = useParams();
+    const product = initialProducts.find((e)=> e.id === Number(productId));
+     return (   
+        <div>   
+             
         </div>
     )
 }

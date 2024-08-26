@@ -5,6 +5,7 @@ import { CiLogin } from "react-icons/ci";
 const Navbar = () =>{
     return(
       <body>
+        
       <nav className="navbar  navbar-expand-lg navbar-dark  ">
             <div> <img className="company-logo" src={logo} alt="logo" />
             <a className="navbar-brand company-name "  href="">CYBERFORGE</a></div>
@@ -14,7 +15,7 @@ const Navbar = () =>{
             </button>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav ms-auto nav-items">
-                    <li >
+                <li >
                         <a className="nav-link navstyle" styles="color:white;" href="\">Home</a>
                     </li>
                     <li >
@@ -24,7 +25,7 @@ const Navbar = () =>{
                         <a className="nav-link navstyle" href="\shop">Shop</a>
                     </li>
                     <li >
-                        <a className="nav-link navstyle login" href="\login"><CiLogin /></a>
+                        <a className="nav-link navstyle login" href="\login"></a>
                     </li>
                 </ul>
             </div>

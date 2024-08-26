@@ -45,7 +45,7 @@ function Home() {
 
             <div className="col-lg-4 col-md-6 mb-4 ">
                 <div className="card">
-                <image className="card-img-top" src={card1} alt="Card image cap"/>
+                <img className="card-img-top" src={card1} alt="Card image cap"/>
                 <div className="card-body d-grid gap-2">
                     
                     <button  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooling System  </p> <p>$150.00</p></button>
@@ -56,7 +56,7 @@ function Home() {
 
             <div className="  col-lg-4 col-md-6 mb-4  ">
                 <div className="card">
-                <image className="card-img-top" src={card2} alt="Card image cap"/>
+                <img className="card-img-top" src={card2} alt="Card image cap"/>
                     <div className="card-body  d-grid gap-2">
 
                     <button  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"><p> SSD-1TB </p> <p>$150.00</p></button>
@@ -66,7 +66,7 @@ function Home() {
             
             <div class="col-lg-4 col-md-12 mb-3 ">
                 <div className="card">
-                <image className="card-img-top" src={card3} alt="Card image cap"/>
+                <img className="card-img-top" src={card3} alt="Card image cap"/>
                 <div className="card-body d-grid gap-2">
                     
                 <button className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p> Graphic Card-8GB </p> <p>$150.00</p> </button>
