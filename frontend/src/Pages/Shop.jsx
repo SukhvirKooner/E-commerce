@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./CSS/Shop.css"
-
+import {Link} from "react-router-dom";
 import React, { useState } from 'react';
 import FilterBar from '../Components/filter/FilterBar.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -38,7 +38,7 @@ function Shop() {
                     <div className="product-grid">
                         {products.map((product) => (
                             <div key={product.id} className="product-card">
-                                <img className='product-image' src={product.image} alt="" />
+                              <Link to={`/product/${product.id}`}>   <img className='product-image' src={product.image} alt="" /> </Link>
                                 
                                 <h5 className='subtext'>{product.name}</h5>
                                 <p className='subtext'> ${product.price}</p>

@@ -20,7 +20,9 @@ svg{
   width: 25px;
   height: 25px;
 }
-
+.login{
+  color: white;
+}
 
 .nav-items{
   margin-right:50px ;

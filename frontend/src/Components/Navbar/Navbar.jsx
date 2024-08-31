@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png"
 import { CiLogin } from "react-icons/ci";
+import { PiShoppingCartThin } from "react-icons/pi";
 const Navbar = () =>{
     return(
       <body>
@@ -25,8 +26,12 @@ const Navbar = () =>{
                         <a className="nav-link navstyle" href="\shop">Shop</a>
                     </li>
                     <li >
-                        <a className="nav-link navstyle login" href="\login"></a>
+                        <a className="nav-link navstyle cart" href="\cart"><PiShoppingCartThin /></a>
                     </li>
+                    <li >
+                        <a className="nav-link navstyle login" href="\login"><CiLogin /></a>
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
