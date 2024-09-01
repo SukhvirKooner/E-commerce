@@ -9,6 +9,7 @@ import Custom from './Pages/Custom.jsx';
 import LoginSignup from './Pages/LoginSignup.jsx'
 import Item from './Components/Item/item.jsx';
 import Shop from './Pages/Shop.jsx';
+import Cart from './Pages/Cart.jsx';
 function App() {
   return (
     <div >
@@ -24,6 +25,7 @@ function App() {
       <Route path='/custom' element={<Custom/>}/>
       <Route path='/login' element={<LoginSignup/>}/>
       <Route path='/item' element={<Item/>}/>
+      <Route path='/cart' element={<Cart/>}/>
       </Routes>
       <Footer/>
       

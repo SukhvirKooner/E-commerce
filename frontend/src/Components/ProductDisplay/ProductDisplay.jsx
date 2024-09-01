@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import "./ProductDisplay.css"
+import { ShopContext } from '../../Context/ShopContext';
 function ProductDisplay(props) {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext);
 
     return (
         <div className="product-page">
@@ -16,7 +18,7 @@ function ProductDisplay(props) {
                     <label>Quantity</label>
                     <input type="number" min="1" defaultValue="1" />
                 </div>
-                <button className="add-to-cart">Add to Cart</button>
+                <button onClick={()=>{addToCart(product.id)}} className="add-to-cart">Add to Cart</button>
                 <div className="social-icons">
                     <a href="#"><i className="fab fa-whatsapp"></i></a>
                     <a href="#"><i className="fab fa-facebook-f"></i></a>
