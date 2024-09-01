@@ -1,86 +1,46 @@
 import React, { useState } from "react";
+import "./CSS/LoginSignup.css"
 
 
-function LoginSignup() {
-    const [formData, setFormData] = useState({
-        username: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-      });
-    
-      const handleChange = (e) => {
-        setFormData({
-          ...formData,
-          [e.target.name]: e.target.value,
-        });
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add form validation or submission logic here
-        console.log(formData);
-      };
-    
+  // const [formData, setFormData] = useState({
+  //   username: '',
+  //   email: '',
+  //   password: '',
+  // });
+
+  // const handleChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Here you'd normally send the formData to your backend for processing
+  //   console.log('Form submitted:', formData); 
+  // };
+
+  const LoginSignup = () => {
       return (
-        <div className="signup-container">
-          <div className="signup-card">
-            <h2 className="text-center">Sign Up</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="username"
-                  name="username"
-                  value={formData.username}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email address</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="confirmPassword">Confirm Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <button type="submit" className="btn btn-primary btn-block mt-4">
-                Sign Up
-              </button>
-            </form>
+        <div className="login-container">
+      <div className="login-section">
+        <h2 className="subtext">LOG IN TO YOUR ACCOUNT</h2>
+        <form style={{display:"block"}}>
+          <div className="form-group">
+            <label className="subtext" htmlFor="email">E-MAIL</label>
+            <input type="email" id="login-email" />
           </div>
-        </div>
+          <div className="form-group">
+            <label className="subtext" htmlFor="password">PASSWORD</label>
+            <input type="email" id="login-password" />
+          </div>
+          <button type="submit" style={{textAlign:"center"}} className="subtext login-button">LOG IN</button>
+          <a href="" className="forgot-password">Have you forgotten your password?</a>
+        </form>
+      </div>
+      <div className="register-section">
+        <h2 className="subtext">NEED AN ACCOUNT?</h2>
+        <button style={{textAlign:"center"}} className="subtext register-button">REGISTER</button>
+      </div>
+    </div>
       );
 }
 

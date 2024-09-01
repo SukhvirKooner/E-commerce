@@ -80,7 +80,7 @@ label {
     margin-right: 10px;
 }
 
-input[type="email"] {
+#footer-email {
     border: none;
     border-bottom: 1px solid #000;
     outline: none;

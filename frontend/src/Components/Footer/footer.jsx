@@ -23,7 +23,7 @@ function Footer() {
         <div class="subscribe-container ">
         <form id="subscribeForm" onsubmit="return showThankYouMessage();">
         <label for="email" className='subtext'>Your email :</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="footer-email" name="email" required />
         <button type="submit" className='subbtn subtext'>Subscribe</button>
         </form>
         {/* <p id="thankYouMessage" >Thank you for subscribing!</p> */}
