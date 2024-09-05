@@ -2,6 +2,13 @@
     display: flex;
     flex-wrap: wrap;
 }
+.row1{
+    display:contents;
+}
+
+.col2{
+    margin-left: 30px;
+}
 
 .product-card {
     border: 1px solid #ddd;
@@ -25,4 +32,12 @@
 }
 .product-image{
     width: 250px;
+}
+@media (max-width:800px) {
+    .row1{
+        display:block;
+    }
+    .col1{
+        width: 300px;
+    }
 }

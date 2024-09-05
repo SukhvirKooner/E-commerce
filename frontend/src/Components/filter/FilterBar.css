@@ -4,6 +4,7 @@
     border: 1px solid #ddd;
     border-radius: 0px;
     background-color: #f8f9fa;
+    width: 300px;
 }
 
 .filter-section {
@@ -26,6 +27,11 @@
 .filter-bar ul li a {
     color: #000;
     text-decoration: none;
+}
+.filter-bar ul li button {
+    color: #000;
+    text-decoration: none;
+    background: transparent;
 }
 
 .filter-bar ul li a:hover {

@@ -28,12 +28,12 @@ function Shop() {
     };
 
     return (
-        <div className="container" style={{margin:"4rem"}}>
-            <div className="row">
-                <div className="col-md-3">
+        <div className="container"  style={{margin:"4rem"}}>
+            <div className="row1">
+                <div className="col1">
                     <FilterBar onFilter={handleFilter} />
                 </div>
-                <div className="col-md-9">
+                <div className="col2">
                     <h2 className='subtext' style={{fontWeight:"bold"}}>All Products</h2>
                     <div className="product-grid">
                         {products.map((product) => (

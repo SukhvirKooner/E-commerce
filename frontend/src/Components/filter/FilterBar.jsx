@@ -29,13 +29,7 @@ const FilterBar = ({ onFilter }) => {
 
     return (
         <div className="filter-bar">
-            <h5 className='subtext'>Browse by</h5>
-            <ul className="list-unstyled">
-                <li className='subtext'><a href="#">All Products</a></li>
-                <li className='subtext'><a href="#">Custom PCs</a></li>
-                <li className='subtext'><a href="#">Gaming Peripherals</a></li>
-                <li className='subtext'><a href="#">PC Components</a></li>
-            </ul>
+            
             <h5 className='subtext'>Filter by</h5>
             <div className="filter-section">
                 <h6 className='subtext'>Product Type</h6>
@@ -89,8 +83,8 @@ const FilterBar = ({ onFilter }) => {
                     }
                 />
                 <div className="d-flex justify-content-between mt-2">
-                    <span className='subtext'>₹{priceRange[0]}.00</span>
-                    <span className='subtext'>₹{priceRange[1]}.00</span>
+                    <span className='subtext'>${priceRange[0]}.00</span>
+                    <span className='subtext'>${priceRange[1]}.00</span>
                 </div>
             </div>
             <button className="pricebtn btn btn-outline-dark btn-lg subtext " onClick={applyFilters}>
