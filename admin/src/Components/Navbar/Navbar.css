@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .company-name {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 5px;
+    font-size:20px;
+  }
+  .navstyle{
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+  svg{
+    width: 25px;
+    height: 25px;
+  }
+  .login{
+    color: white;
+  }
+  
+  .nav-items{
+    margin-right:50px ;
+  }
+  .company-logo{
+    padding-bottom: 4px;
+    padding-right: 5px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000; /* Black background */
+  }
+  
+  
+  .nav-links {
+    color: white;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-size: 18px;
+  }
+  
+  .nav-links a:hover {
+    color: #00aaff; /* Light blue on hover */
+  }
+  
+  
+  
+  
+  
