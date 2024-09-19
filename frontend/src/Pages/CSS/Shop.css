@@ -1,6 +1,8 @@
 .product-grid {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1000px;
+   
 }
 .row1{
     display:contents;
@@ -8,6 +10,7 @@
 
 .col2{
     margin-left: 30px;
+    width: 1000px;
 }
 
 .product-card {
@@ -34,9 +37,11 @@
     width: 250px;
 }
 @media (max-width:800px) {
-    .row1{
-        display:block;
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
     }
+    
     .col1{
         width: 300px;
     }

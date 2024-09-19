@@ -28,7 +28,7 @@ function Shop() {
     };
 
     return (
-        <div className="container"  style={{margin:"4rem"}}>
+        <div className="container"  style={{margin:"4rem -1rem 0rem 4rem"}}>
             <div className="row1">
                 <div className="col1">
                     <FilterBar onFilter={handleFilter} />
@@ -38,7 +38,7 @@ function Shop() {
                     <div className="product-grid">
                         {products.map((product) => (
                             <div key={product.id} className="product-card">
-                              <Link to={`/product/${product.id}`}>   <img className='product-image' src={product.image} alt="" /> </Link>
+                              <Link to={`/product/${product.id}`}>   <img onClick={window.scrollTo(0,0)} className='product-image' src={product.image} alt="" /> </Link>
                                 
                                 <h5 className='subtext'>{product.name}</h5>
                                 <p className='subtext'> ${product.price}</p>

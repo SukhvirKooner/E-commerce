@@ -6,6 +6,9 @@
    font-weight: 400;
    font-style: normal;
 }
+.hid{
+    display: none;
+}
 .titletext{
     color: white;
     text-align: center;
@@ -112,6 +115,11 @@ p{
     font-weight: 500;
     font-style: normal;
     color: #000;
+}
+@media (max-width:989px) {
+    .hid{
+        display: block;
+    }
 }
 @media (max-width: 600px) {
     .titletext {

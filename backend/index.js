@@ -10,6 +10,12 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
+
+const axios = require('axios');
+const dotenv = require('dotenv');
+dotenv.config();
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
 // database connection with mongodb
 mongoose.connect("mongodb+srv://SukhvirSingh:YellowFlash%402005@cluster0.yy9yq.mongodb.net/e-commerce-2");
 
@@ -18,6 +24,70 @@ mongoose.connect("mongodb+srv://SukhvirSingh:YellowFlash%402005@cluster0.yy9yq.m
 app.get("/",(req,res)=>{
     res.send("Express app is running");
 });
+
+
+//ai 
+
+ console.log(process.env.API_KEY);
+
+
+//  async function generateStory() {
+//     const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+//     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+//     const prompt = "Write a story about a magic backpack.";
+//     const result = await model.generateContent(prompt);
+//     console.log(result.response.text());
+//   }
+//   generateStory();
+async function generateCustomPCComponents(budget, usecase) {
+    try {
+      const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const prompt = `Generate a list of PC components (CPU, GPU, motherboard, RAM, storage) suitable for a custom PC with a budget of ${budget} rupees and a primary use case of ${usecase}.`;
+      const result = await model.generateContent(prompt);
+  
+      // Handle empty responses (optional)
+      if (!result.response || !result.response.text()) {
+        return {
+          success: false,
+          message: 'The API did not return any components. Please try again later.'
+        };
+      }
+  
+      const components = result.response.text().split('\n');
+  
+      // Filter out empty or non-string elements
+      const filteredComponents = components.filter(component => typeof component === 'string' && component.trim() !== '');
+  
+      // Process the components data, handling potential missing colons
+      const processedComponents = filteredComponents.map(component => {
+        const parts = component.trim().split(/\s*:\s*/);
+        const name = parts[0] || '';
+        const specs = parts[1] || '';
+        return { name, specs };
+      });
+  
+      return {
+        success: true,
+        components: processedComponents
+      };
+    } catch (error) {
+      console.error('Error generating custom PC components:', error);
+      return {
+        success: false,
+        message: 'An error occurred while generating custom PC components. Please try again later.'
+      };
+    }
+  }
+  // Example usage in your backend route:
+  app.post('/get-custom-pc', async (req, res) => {
+    const budget = req.body.budget;
+    const usecase = req.body.usecase;
+  
+    const response = await generateCustomPCComponents(budget, usecase);
+    res.json(response);
+  });
+
 
 // Image storage engine
 

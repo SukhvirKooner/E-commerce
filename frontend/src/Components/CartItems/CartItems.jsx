@@ -17,8 +17,10 @@ function CartItems() {
             <hr />
             {initialProducts.map((e)=>{
                 // cartItems[e.id]>0
-                if(true){
+                if(cartItems[e.id]>0){
                     return(<div>
+                        
+
                         <div style={{textAlign:"center"}} className=" subtext cartitems-format cartitems-format-main">
                         <img src={e.image} className='carticon-product-icon' alt="" />
                         <p>{e.name}</p>
@@ -30,8 +32,16 @@ function CartItems() {
                     <hr/>
                 </div>
                 );
+                   } 
+                // else{
+                //     return(<div>
+                //     <h1>
+                //         Cart is empty
+                //     </h1>
+                //     </div>
+                //     )
                     
-                }
+                // }
             })}
             <div className="cartitems-down subtext">
                 <div className="cartitems-total">

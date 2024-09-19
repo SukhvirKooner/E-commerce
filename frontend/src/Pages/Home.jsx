@@ -7,12 +7,35 @@ import btmimg from "../Components/Assets/6.png"
 import card1 from "../Components/Assets/card1.png"
 import card2 from "../Components/Assets/card2.png"
 import card3 from "../Components/Assets/card3.png"
+import item4 from "../Components/Assets/item4.png"
 
 function Home() {
     const navigate = useNavigate();
     const loadMore = () => {
         navigate('/shop');
+        window.scrollTo(0,0);
     };
+    const product1 = () => {
+        navigate('/product/1');
+        window.scrollTo(0,0);
+    };
+    const product2 = () => {
+        navigate('/product/2');
+        window.scrollTo(0,0);
+    };
+    const product3 = () => {
+        navigate('/product/3');
+        window.scrollTo(0,0);
+    };
+    const product4 = () => {
+        navigate('/product/4');
+        window.scrollTo(0,0);
+    };
+    const custom = () => {
+        navigate('/custom');
+        window.scrollTo(0,0);
+    };
+
 
     return (
         <div className='mega'>
@@ -48,7 +71,7 @@ function Home() {
                 <img className="card-img-top" src={card1} alt="Card image cap"/>
                 <div className="card-body d-grid gap-2">
                     
-                    <button  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooling System  </p> <p>$150.00</p></button>
+                    <button onClick={product1}  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooling System  </p> <p>$150.00</p></button>
                 </div>
                 </div>  
             </div>
@@ -59,17 +82,27 @@ function Home() {
                 <img className="card-img-top" src={card2} alt="Card image cap"/>
                     <div className="card-body  d-grid gap-2">
 
-                    <button  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"><p> SSD-1TB </p> <p>$150.00</p></button>
+                    <button onClick={product2}  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"><p> SSD-1TB </p> <p>$150.00</p></button>
                     </div>
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-12 mb-3 ">
+            
+            <div class="col-lg-4 col-md-6 mb-3 ">
                 <div className="card">
                 <img className="card-img-top" src={card3} alt="Card image cap"/>
                 <div className="card-body d-grid gap-2">
                     
-                <button className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p> Graphic Card-8GB </p> <p>$150.00</p> </button>
+                <button onClick={product3} className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p> Graphic Card-8GB </p> <p>$150.00</p> </button>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3 hid ">
+                <div className="card">
+                <img className="card-img-top" src={item4} alt="Card image cap"/>
+                <div className="card-body d-grid gap-2">
+                    
+                <button onClick={product4} className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p> Gaming Headset </p> <p>$100.00</p> </button>
                 </div>
                 </div>
             </div>
@@ -87,7 +120,7 @@ function Home() {
             <div className="row ">
             <div className='col-md-4'><p className='text'> AI PC Consultaion</p></div>
             <div className='col-md-4'><p className='text'>Free!</p></div>
-            <div className='col-md-4' style={{textAlign:"center"}}><button class="pricebtn btn btn-outline-dark btn-lg text" type="button"> Try Now </button></div>
+            <div className='col-md-4' style={{textAlign:"center"}}><button onClick={custom} class="pricebtn btn btn-outline-dark btn-lg text" type="button"> Try Now </button></div>
             </div>
             
             <hr className='servicehr' />
@@ -98,9 +131,9 @@ function Home() {
             </div>
             <hr className='servicehr' style={{height:"0.5px"}} />
             <div className="row ">
-            <div className='col-md-4'><p className='text'>Gaming Peripherals setup</p></div>
-            <div className='col-md-4'><p className='text'>30$</p></div>
-            <div className='col-md-4' style={{textAlign:"center"}}><button class="pricebtn btn btn-outline-dark btn-lg text" type="button"> Buy Now </button></div>
+            <div className='col-md-4'><p className='text'>Gaming Peripheral's</p></div>
+            <div className='col-md-4'><p className='text'>100$</p></div>
+            <div className='col-md-4' style={{textAlign:"center"}}><button onClick={loadMore} class="pricebtn btn btn-outline-dark btn-lg text" type="button"> Buy Now </button></div>
             </div>
             <hr className='servicehr' style={{height:"1.5px"}} />
 

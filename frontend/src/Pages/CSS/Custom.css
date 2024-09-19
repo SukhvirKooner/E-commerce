@@ -36,10 +36,23 @@
     opacity: 0.6;
 }
 
-
+.recomend{
+    font-size: 2rem;
+    
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+.loading{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+.Result{
+    margin: 40px;
+}
 .custom{
     margin-top: 10%;
-    margin-bottom: 40%;
 }
 .custom-title{
     

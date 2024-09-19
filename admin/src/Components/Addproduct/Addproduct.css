@@ -30,8 +30,8 @@
     border-radius: 2px;
 }
 .upload{
-    height: 50px;
-    width:  50px;
+    height: 80px;
+    width:  80px;
     border: 1px solid black;
     border-radius: 3px;
     object-fit: contain;
