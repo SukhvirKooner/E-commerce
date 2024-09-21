@@ -15,6 +15,7 @@ const axios = require('axios');
 const dotenv = require('dotenv');
 dotenv.config();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { type } = require("os");
 
 // database connection with mongodb
 mongoose.connect("mongodb+srv://SukhvirSingh:YellowFlash%402005@cluster0.yy9yq.mongodb.net/e-commerce-2");
@@ -28,7 +29,7 @@ app.get("/",(req,res)=>{
 
 //ai 
 
- console.log(process.env.API_KEY);
+ 
 
 
 //  async function generateStory() {
@@ -190,7 +191,77 @@ app.get("/allproducts", async (req,res)=>{
     console.log("all products fetched");
     res.send(products);
 });
+// schma creating
+const User = mongoose.model('User',{
+    name:{
+        type:String,
+        
+    },
+    email:{
+        type:String,
+        unique:true,
+    },
+    password:{
+        type:String,
+    },
+    cartData:{
+        type:Object,
+    },
+    date:{
+        type:Date,
+        default:Date.now,
+    }
+})
 
+// creating endpoint for registering user
+app.post('/signup', async(req,res)=>{
+    let check = await User.findOne({email:req.body.email});
+    if (check){
+        return res.status(400).json({success:false,errors:"existing user found with same email ID"})
+    }
+    let cart = {};
+    for (let index = 0; index < 300; index++) {
+        cart[index]=0;
+        
+    }
+    const user = new User({
+        name: req.body.name,
+        email:req.body.email,
+        password:req.body.password,
+        cartData:cart,
+    })
+    await user.save();
+
+    const data = {
+        user:{
+            id:user.id
+        }
+    }
+    const token = jwt.sign(data,'secret_ecom');
+    res.json({success:true,token})
+})
+
+app.post('/login',async (req,res)=>{
+    let user = await User.findOne({email:req.body.email});
+    if (user){
+        const passCompare = req.body.password === user.password;
+        if(passCompare){
+            const data = {
+                user:{
+                    id:user.id
+                }
+            }
+            const token = jwt.sign(data,'secret_ecom');
+            res.json({success:true,token}); 
+        }
+        else{
+            res.json({success:"false",errors:"wrong password"})
+        }
+    }
+    else{
+        res.json({success:"false",errors:"wrong email ID"})
+    }
+})
 
 app.listen(port,(error)=>{
     if(!error){

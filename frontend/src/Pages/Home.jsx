@@ -62,7 +62,7 @@ function Home() {
             </div>
             <div className='titletext'>TOP PICKS</div>
             
-        <section id="pricing">
+            <section id="pricing">
 
             <div className="row  text-center">
 
@@ -111,7 +111,7 @@ function Home() {
 
 
 
-        </section>
+         </section>
         </div>
         <section id='Services'>
 

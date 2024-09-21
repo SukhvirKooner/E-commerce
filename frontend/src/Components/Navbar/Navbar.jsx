@@ -29,7 +29,7 @@ const Navbar = () =>{
                         <a className="nav-link navstyle cart" href="\cart"><PiShoppingCartThin /></a>
                     </li>
                     <li >
-                        <a className="nav-link navstyle login" href="\login"><CiLogin /></a>
+                        <a className="nav-link navstyle login" href="\signup"><CiLogin /></a>
                     </li>
                     
                 </ul>

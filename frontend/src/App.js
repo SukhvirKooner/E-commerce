@@ -23,12 +23,11 @@ function App() {
       <Route path=':productID' element={<Product/>}/>
       </Route>
       <Route path='/custom' element={<Custom/>}/>
-      <Route path='/login' element={<LoginSignup/>}/>
+      <Route path='/signup' element={<LoginSignup/>}/>
       <Route path='/item' element={<Item/>}/>
       <Route path='/cart' element={<Cart/>}/>
       </Routes>
       <Footer/>
-      
       </BrowserRouter>
     </div>
   );

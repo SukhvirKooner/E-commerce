@@ -15,8 +15,7 @@ function ChatGPTForm() {
     setError(null);
 
     try {
-      const   
-         response = await axios.post('http://localhost:4000/get-custom-pc', {
+      const response = await axios.post('http://localhost:4000/get-custom-pc', {
         budget,
         usecase
       });
@@ -50,8 +49,7 @@ function ChatGPTForm() {
             className="form-control"
           />
         </div>
-        <div className="form-group   
- mb-3">
+        <div className="form-group mb-3">
           <label className='text' htmlFor="useCase">Use Case:</label>
           <input
             type="text"
