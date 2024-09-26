@@ -136,10 +136,16 @@ p{
     .hid{
         display: block;
     }
+    .titletext{
+        font-size: 120px;
+    }
+    .subtext{
+        font-size: larger;
+    }
     .photo-1{
-        width: 10rem;
+        width: 20rem;
         padding-top: 6%;
-        padding-left: 0%;
+        
     }
     .photo-2{
         padding-top: 0rem;
