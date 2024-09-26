@@ -71,7 +71,7 @@ svg{
     width: 50px;
   }
   .nav-link{
-    font-size: 5rem;
+    font-size: 50px;
     text-align: center;
   }
   .company-name{
@@ -82,8 +82,8 @@ svg{
     padding-bottom: 20px;
   }
   svg{
-    height: 5rem;
-    width: 5rem;
+    height: 50px;
+    width: 50px;
   }
 }
 
