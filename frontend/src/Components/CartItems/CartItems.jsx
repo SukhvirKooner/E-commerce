@@ -3,7 +3,7 @@ import "./CartItems.css"
 import { ShopContext } from '../../Context/ShopContext'
 import { RxCross2 } from "react-icons/rx";
 function CartItems() {
-    const {initialProducts,cartItems,removeFromCart,getTotalCartAmount} = useContext(ShopContext);
+    const {all_products,cartItems,removeFromCart,getTotalCartAmount} = useContext(ShopContext);
     return (
         <div className="cartitems">
             <div style={{textAlign:"center"}} className=" subtext cartitems-format-main">
@@ -15,7 +15,7 @@ function CartItems() {
                 <p>Remove</p>
             </div>
             <hr />
-            {initialProducts.map((e)=>{
+            {all_products.map((e)=>{
                 // cartItems[e.id]>0
                 if(cartItems[e.id]>0){
                     return(<div>

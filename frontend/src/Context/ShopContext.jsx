@@ -1,9 +1,9 @@
-import {React,createContext, useState} from 'react';
-import initialProducts from '../Components/Assets/data';
+import {React,createContext, useEffect, useState} from 'react';
+
 export const ShopContext = createContext(null);
 const getDefaultCart = () =>{
     let cart = {};
-    for (let index = 0; index < initialProducts.length+1; index++) {
+    for (let index = 0; index < 300+1; index++) {
         cart[index] = 0;
 
         
@@ -11,6 +11,16 @@ const getDefaultCart = () =>{
     return cart;
 }
 const ShopContextProvider = (props)=> {
+
+    const [all_products,setAll_Products]= useState([]) ;
+    useEffect(()=>{
+        fetch('http://localhost:4000/allproducts')
+        .then((response)=>response.json())
+        .then((data)=>setAll_Products(data))
+    },[])
+
+
+
     const [cartItems , setCartItems ] = useState(getDefaultCart());
     
     
@@ -26,7 +36,7 @@ const ShopContextProvider = (props)=> {
         let totalAmount =0;
         for(const item in cartItems){
             if (cartItems[item]>0){
-                let itemInfo = initialProducts.find((product)=>product.id===Number(item));
+                let itemInfo = all_products.find((product)=>product.id===Number(item));
                 totalAmount += itemInfo.price * cartItems[item];
             }
             
@@ -34,7 +44,7 @@ const ShopContextProvider = (props)=> {
             return totalAmount;
     }
 
-    const contextValue ={initialProducts,cartItems,addToCart,removeFromCart,getTotalCartAmount};
+    const contextValue ={all_products,cartItems,addToCart,removeFromCart,getTotalCartAmount};
     return(
         <ShopContext.Provider value={contextValue}>
 

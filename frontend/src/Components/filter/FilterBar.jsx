@@ -4,7 +4,7 @@ import './FilterBar.css'; // Optional for additional styling
 
 const FilterBar = ({ onFilter }) => {
     const [selectedTypes, setSelectedTypes] = useState([]);
-    const [priceRange, setPriceRange] = useState([80, 2200]);
+    const [priceRange, setPriceRange] = useState([100, 2200]);
 
     const handleTypeChange = (event) => {
         const value = event.target.value;
@@ -75,7 +75,7 @@ const FilterBar = ({ onFilter }) => {
                 <input
                     type="range"
                     className="form-range"
-                    min="80"
+                    min="100"
                     max="2200"
                     value={priceRange[1]}
                     onChange={(e) =>

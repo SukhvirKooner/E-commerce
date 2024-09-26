@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./CSS/Shop.css"
 import {Link} from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FilterBar from '../Components/filter/FilterBar.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import initialProducts from '../Components/Assets/data.js';
+
 
 
 
@@ -13,18 +13,28 @@ import initialProducts from '../Components/Assets/data.js';
 
 function Shop() {
     const [filter, setFilters] = useState({});
-    const [products, setProducts] = useState(initialProducts);
+
+    const [all_products,setAll_Products]= useState([]) ;
+    useEffect(()=>{
+        fetch('http://localhost:4000/allproducts')
+        .then((response)=>response.json())
+        .then((data)=>setAll_Products(data))
+    },[])
+
+    
+    
+    
 
     const handleFilter = (filters) => {
         setFilters(filters);
 
-        const filteredProducts = initialProducts.filter((product) => {
+        const filteredProducts = all_products.filter((product) => {
             const typeMatch = filters.selectedTypes.length === 0 || filters.selectedTypes.includes(product.type);
             const priceMatch = product.price >= filters.priceRange[0] && product.price <= filters.priceRange[1];
             return typeMatch && priceMatch;
         });
 
-        setProducts(filteredProducts);
+        setAll_Products(filteredProducts);
     };
 
     return (
@@ -36,7 +46,7 @@ function Shop() {
                 <div className="col2">
                     <h2 className='subtext' style={{fontWeight:"bold"}}>All Products</h2>
                     <div className="product-grid">
-                        {products.map((product) => (
+                        {all_products.map((product) => (
                             <div key={product.id} className="product-card">
                               <Link to={`/product/${product.id}`}>   <img onClick={window.scrollTo(0,0)} className='product-image' src={product.image} alt="" /> </Link>
                                 

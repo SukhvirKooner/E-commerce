@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png"
-import { CiLogin } from "react-icons/ci";
+import { CiLogin, CiLogout } from "react-icons/ci";
 import { PiShoppingCartThin } from "react-icons/pi";
 const Navbar = () =>{
     return(
@@ -29,7 +29,7 @@ const Navbar = () =>{
                         <a className="nav-link navstyle cart" href="\cart"><PiShoppingCartThin /></a>
                     </li>
                     <li >
-                        <a className="nav-link navstyle login" href="\signup"><CiLogin /></a>
+                        {localStorage.getItem('auth-token')?<a onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}} className="nav-link navstyle login" href="\signup"><CiLogout/></a>:<a  className="nav-link navstyle login" href="\signup"><CiLogin/></a>}
                     </li>
                     
                 </ul>
