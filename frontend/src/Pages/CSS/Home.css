@@ -136,11 +136,6 @@ p{
     .hid{
         display: block;
     }
-}
-@media (max-width: 600px) {
-    .titletext {
-        font-size: 50px;
-    }
     .photo-1{
         width: 10rem;
         padding-top: 6%;
@@ -165,6 +160,8 @@ p{
     #pricing{
         margin-left: 0%;
     }
+   
 }
+
 
 

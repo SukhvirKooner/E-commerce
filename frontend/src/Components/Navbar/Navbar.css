@@ -8,7 +8,7 @@ body {
   font-weight: 400;
   font-style: normal;
   margin-left: 5px;
-  font-size:20px;
+  font-size:30px;
 }
 .navstyle{
   font-family: "Josefin Slab", serif;
@@ -28,7 +28,7 @@ svg{
   margin-right:50px ;
 }
 .company-logo{
-  padding-bottom: 4px;
+  padding-bottom: 11px;
   padding-right: 5px;
 }
 .navbar {
@@ -62,6 +62,24 @@ svg{
   color: #00aaff; /* Light blue on hover */
 }
 
-
+@media (max-width:989px) {
+  .navbar-toggler{
+    height: 70px;
+    width: 70px;
+  }
+  .navbar-toggler-icon{
+    width: 50px;
+  }
+  .nav-link{
+    font-size: 1.5rem;
+  }
+  .company-name{
+    font-size: 50px;
+  }
+  .company-logo{
+    width: 50px;
+    padding-bottom: 20px;
+  }
+}
 
 
