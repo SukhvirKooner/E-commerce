@@ -8,6 +8,7 @@
         transform: translateX(0px);
     }
 }
+
 .animation-1{
     animation:appear linear ;
     animation-timeline: view();
@@ -28,7 +29,7 @@
 .titletext{
     color: white;
     text-align: center;
-    font-size: 90px;
+    font-size: 91px;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 400;
