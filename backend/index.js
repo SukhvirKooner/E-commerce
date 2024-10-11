@@ -29,17 +29,6 @@ app.get("/",(req,res)=>{
 
 //ai 
 
- 
-
-
-//  async function generateStory() {
-//     const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-//     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-//     const prompt = "Write a story about a magic backpack.";
-//     const result = await model.generateContent(prompt);
-//     console.log(result.response.text());
-//   }
-//   generateStory();
 async function generateCustomPCComponents(budget, usecase) {
     try {
       const genAI = new GoogleGenerativeAI(process.env.API_KEY);
