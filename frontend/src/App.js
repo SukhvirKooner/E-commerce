@@ -6,7 +6,9 @@ import Home from "./Pages/Home.jsx";
 import Product from "./Pages/Product.jsx"
 import Footer from './Components/Footer/footer.jsx';
 import Custom from './Pages/Custom.jsx';
-import LoginSignup from './Pages/LoginSignup.jsx'
+import LoginSignup from './Pages/LoginSignup.jsx';
+// lazy loading
+
 import Item from './Components/Item/item.jsx';
 import Shop from './Pages/Shop.jsx';
 import Cart from './Pages/Cart.jsx';

@@ -15,20 +15,28 @@ function Shop() {
     const [filter, setFilters] = useState({});
 
     const [all_products,setAll_Products]= useState([]) ;
+    const [init_products,setInit_Products]= useState([]) ;
+
+    useEffect(()=>{
+        fetch('http://localhost:4000/allproducts')
+        .then((response)=>response.json())
+        .then((data)=>setInit_Products(data))
+        
+    },[])
     useEffect(()=>{
         fetch('http://localhost:4000/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_Products(data))
+        
     },[])
-
-    
+       
     
     
 
     const handleFilter = (filters) => {
         setFilters(filters);
 
-        const filteredProducts = all_products.filter((product) => {
+        const filteredProducts = init_products.filter((product) => {
             const typeMatch = filters.selectedTypes.length === 0 || filters.selectedTypes.includes(product.type);
             const priceMatch = product.price >= filters.priceRange[0] && product.price <= filters.priceRange[1];
             return typeMatch && priceMatch;
