@@ -16,7 +16,7 @@ function CartItems() {
             </div>
             <hr />
             {all_products.map((e)=>{
-                if(true){
+                if(cartItems[e.id]>0){
                     return(<div>
                         
 
