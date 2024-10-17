@@ -287,8 +287,6 @@ app.post("/removefromcart",fetchUser,async(req,res)=>{
     if(userData.cartData[req.body.itemId]>0)
     userData.cartData[req.body.itemId] -=1;
     await User.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData});
-    res.send('removed');
-
     
 })
 // api endpoint to get cart data
