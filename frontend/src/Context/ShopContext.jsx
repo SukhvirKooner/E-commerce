@@ -38,6 +38,9 @@ const ShopContextProvider = (props)=> {
               })
               .then((response)=>{response.json()})
               .then((data)=>{console.log(data,"chal rah h")});
+        }else{
+            console.log("error h");
+            
         }
     }
 
