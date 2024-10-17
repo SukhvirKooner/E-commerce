@@ -16,6 +16,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { type } = require("os");
+const { error } = require("console");
 
 // database connection with mongodb
 mongoose.connect("mongodb+srv://SukhvirSingh:YellowFlash%402005@cluster0.yy9yq.mongodb.net/e-commerce-2");
@@ -250,6 +251,31 @@ app.post('/login',async (req,res)=>{
     else{
         res.json({success:"false",errors:"wrong email ID"})
     }
+})
+
+// middleware to fetch user
+const fetchUser = async(req,res,next)=>{
+    const token = req.header('auth-token');
+    if(!token){
+        res.status(401).send({errors:"please authenticate using valid token"})
+        console.log('error')
+    }else{
+            try{
+                const data=jwt.verify(token,'secret_ecom')
+                req.user= data.user;
+                next(); // using this our token will be decoded and we will get access of user data in request 
+            }catch(error){
+                res.status(401).send({errors:"please authenticate using a valid token"})
+            }
+    }
+
+}
+
+//  creating endpoint for cart data
+app.post('/addtocart',fetchUser,async(req,res)=>{
+    let userData = await User.findOne({_id:req.user.id});
+    userData.cartData[req.body.itemId] +=1;
+    await User.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData});
 })
 
 app.listen(port,(error)=>{

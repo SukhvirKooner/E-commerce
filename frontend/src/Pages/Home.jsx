@@ -120,20 +120,20 @@ function Home() {
             <div className="row ">
             <div className='col-md-4'><p className='text'> AI PC Consultaion</p></div>
             <div className='col-md-4'><p className='text'>Free!</p></div>
-            <div className='col-md-4' style={{textAlign:"center"}}><button onClick={custom} class="pricebtn btn btn-outline-dark btn-lg text" type="button"> Try Now </button></div>
+            <div className='col-md-4' style={{textAlign:"center"}}><button onClick={custom} className="pricebtn btn btn-outline-dark btn-lg text" type="button"> Try Now </button></div>
             </div>
             
             <hr className='servicehr' />
             <div className="row ">
             <div className='col-md-4'><p className='text'> Custom PC Building </p></div>
             <div className='col-md-4'><p className='text'>100$</p></div>
-            <div className='col-md-4' style={{textAlign:"center"}}><button class="pricebtn btn btn-outline-dark btn-lg text" type="button"> Buy Now </button></div>
+            <div className='col-md-4' style={{textAlign:"center"}}><button className="pricebtn btn btn-outline-dark btn-lg text" type="button"> Buy Now </button></div>
             </div>
             <hr className='servicehr' style={{height:"0.5px"}} />
             <div className="row ">
             <div className='col-md-4'><p className='text'>Gaming Peripheral's</p></div>
             <div className='col-md-4'><p className='text'>100$</p></div>
-            <div className='col-md-4' style={{textAlign:"center"}}><button onClick={loadMore} class="pricebtn btn btn-outline-dark btn-lg text" type="button"> Buy Now </button></div>
+            <div className='col-md-4' style={{textAlign:"center"}}><button onClick={loadMore} className="pricebtn btn btn-outline-dark btn-lg text" type="button"> Buy Now </button></div>
             </div>
             <hr className='servicehr' style={{height:"1.5px"}} />
 

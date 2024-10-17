@@ -5,22 +5,22 @@ function Footer() {
         <footer>
             <div className='footertitle'>CYBERFORGE</div>
             
-        <div class="container container-1">
-        <div class="column">
+        <div className="container container-1">
+        <div className="column">
         <p className='subtext'>123-456-7890</p>
         <p className='subtext'>info@mysite.com</p>
         </div>
-        <div class="column">
+        <div className="column">
         <p className='subtext'>Delhi, India</p>
         </div>
-        <div class="column">
+        <div className="column">
         <p></p>
         </div>
         </div>
         <h1></h1>
 
         <div className='newstitle'>Join Our Newsletter</div>
-        <div class="subscribe-container ">
+        <div className="subscribe-container ">
         <form id="subscribeForm" onsubmit="return showThankYouMessage();">
         <label for="email" className='subtext'>Your email :</label>
         <input type="email" id="footer-email" name="email" required />
