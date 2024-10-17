@@ -20,13 +20,10 @@ function Shop() {
     useEffect(()=>{
         fetch('http://localhost:4000/allproducts')
         .then((response)=>response.json())
-        .then((data)=>setInit_Products(data))
-        
-    },[])
-    useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
-        .then((response)=>response.json())
-        .then((data)=>setAll_Products(data))
+        .then((data)=>{
+            setInit_Products(data);
+            setAll_Products(data);
+        })
         
     },[])
        
