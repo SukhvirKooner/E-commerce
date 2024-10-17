@@ -273,11 +273,31 @@ const fetchUser = async(req,res,next)=>{
 
 //  creating endpoint for cart data
 app.post('/addtocart',fetchUser,async(req,res)=>{
+    console.log("added",req.body.itemId );
     let userData = await User.findOne({_id:req.user.id});
     userData.cartData[req.body.itemId] +=1;
     await User.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData});
 })
 
+// creating endpoint for remove product from cart
+app.post("/removefromcart",fetchUser,async(req,res)=>{
+    console.log("removed",req.body.itemId );
+    
+    let userData = await User.findOne({_id:req.user.id});
+    if(userData.cartData[req.body.itemId]>0)
+    userData.cartData[req.body.itemId] -=1;
+    await User.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData});
+    res.send('removed');
+
+    
+})
+// api endpoint to get cart data
+app.post('/getcart',fetchUser,async(req,res)=>{
+    console.log("get cart")
+    let userData = await User.findOne({_id:req.user.id})
+    res.json(userData.cartData);
+
+})
 app.listen(port,(error)=>{
     if(!error){
         console.log("server running on port ",+ port);
