@@ -30,14 +30,14 @@ const ShopContextProvider = (props)=> {
               fetch('http://localhost:4000/addtocart',{
                 method:"POST",
                 headers:{
-                    Accept:"Application/form-data",
+                    Accept:"application/form-data",
                     "auth-token":`${localStorage.getItem('auth-token')}`,
                     "Content-Type":"application/json",
                 },
                 body: JSON.stringify({"itemId":itemId}),
               })
               .then((response)=>{response.json()})
-              .then((data)=>{console.log(   )});
+              .then((data)=>{console.log(data)});
         }
     }
 
