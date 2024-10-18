@@ -26,7 +26,7 @@ function CartItems() {
                         <p>${e.price}</p>
                         <button className='cartitems-quantity'>{cartItems[e.id]}</button>
                         <p>{e.price*cartItems[e.id]}</p>
-                        <button onClick={()=>{removeFromCart(e.id)}} ><RxCross2 /></button>
+                        <button onClick={()=>{removeFromCart(e.id)}} ><RxCross2 className='cartitems-remove-icon' /></button>
                     </div>
                     <hr/>
                 </div>

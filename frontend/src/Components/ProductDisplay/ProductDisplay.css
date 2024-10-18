@@ -8,9 +8,7 @@
     margin-top: 5rem;
     margin-left: 15rem;
     margin-bottom: 10rem;
-    border: 1px solid #ddd;
-    
-   
+    border: 1px solid #ddd; 
 }
 
 .product-image {
@@ -86,4 +84,19 @@
 
 .social-icons a:hover {
     color: #555;
+}
+@media (max-width:989px) {
+    
+.product-page{
+    display: block;
+    border: none;
+}
+.product-image img{
+    margin-bottom: 50px;
+}
+.product-details h1{
+    margin-left:auto ;
+    margin-right:auto ;
+}
+
 }
