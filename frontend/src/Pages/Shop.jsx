@@ -53,7 +53,7 @@ function Shop() {
             <div className="row1">
                 <div className="col1">
                     {/* Filter button for smaller screens */}
-                    <button className="filter-button pricebtn btn btn-outline-light btn-lg subtext" onClick={toggleFilter}>
+                    <button className="filter-button pricebtn btn  btn-lg subtext" onClick={toggleFilter}>
                         {showFilter ? 'Hide Filters' : 'Filters'}
                     </button>
                     {/* Conditionally show FilterBar based on state */}
