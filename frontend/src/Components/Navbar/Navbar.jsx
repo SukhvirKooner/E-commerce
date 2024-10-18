@@ -29,7 +29,15 @@ const Navbar = () =>{
                         <a className="nav-link navstyle cart" href="\cart"><PiShoppingCartThin /></a>
                     </li>
                     <li >
-                        {localStorage.getItem('auth-token')?<a onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}} className="nav-link navstyle login" href="\signup"><CiLogout/></a>:<a  className="nav-link navstyle login" href="\signup"><CiLogin/></a>}
+                    {localStorage.getItem('auth-token') && localStorage.getItem('auth-token') !== 'undefined' ? 
+                        <a onClick={() => { localStorage.removeItem('auth-token'); window.location.replace('/'); }} className="nav-link navstyle login" href="\signup">
+                        <CiLogout/>
+                        </a> 
+                        : 
+                        <a className="nav-link navstyle login" href="\signup">
+                        <CiLogin/>
+                        </a>
+                    }
                     </li>
                     
                 </ul>

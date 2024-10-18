@@ -233,7 +233,7 @@ app.post('/signup', async(req,res)=>{
 
 app.post('/login',async (req,res)=>{
     let user = await User.findOne({email:req.body.email});
-    if (user){
+        if (user){
         const passCompare = req.body.password === user.password;
         if(passCompare){
             const data = {
@@ -250,7 +250,8 @@ app.post('/login',async (req,res)=>{
     }
     else{
         res.json({success:"false",errors:"wrong email ID"})
-    }
+
+        }
 })
 
 // middleware to fetch user

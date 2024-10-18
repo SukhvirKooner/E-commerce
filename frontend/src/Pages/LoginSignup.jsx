@@ -34,7 +34,7 @@ import "./CSS/LoginSignup.css"
         },
         body:JSON.stringify(formData),
       }).then((response)=>response.json()).then((data)=>responseData=data)
-      if (responseData.success){
+      if (responseData.success && responseData.token){
         localStorage.setItem('auth-token',responseData.token);
         window.location.replace("/");
       }else{
