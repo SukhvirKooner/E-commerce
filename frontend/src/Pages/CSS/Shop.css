@@ -24,6 +24,7 @@
 .product-card h5 {
     margin-bottom: 5px;
     margin-top: 10px;
+    width: 250px;
 }
 
 .product-card p {
@@ -36,7 +37,7 @@
 .product-image{
     width: 250px;
 }
-@media (max-width:800px) {
+@media (max-width:989px) {
     .product-grid {
         display: flex;
         flex-wrap: wrap;

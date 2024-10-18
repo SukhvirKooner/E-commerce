@@ -71,7 +71,7 @@ function Home() {
                 <img className="card-img-top" src={card1} alt="Card image cap"/>
                 <div className="card-body d-grid gap-2">
                     
-                    <button onClick={product1}  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooling System  </p> <p>$150.00</p></button>
+                    <button onClick={product1}  className="pricebtn btn btn-outline-light btn-lg subtext" type="button"> <p>Liquid Cooler  </p> <p>$150.00</p></button>
                 </div>
                 </div>  
             </div>
