@@ -13,7 +13,13 @@ const LoginSignup = () => {
   const [errors, setErrors] = useState({ email: "", password: "" });
 
   // Zod schema for validation
-  
+  const loginSchema = z.object({
+    email: z.string().email("Invalid email address"), // Email should be valid
+    password: z.string()
+      .min(6, "Password must be at least 6 characters long")
+      .regex(/[a-zA-Z]/, "Password must contain letters")
+      .regex(/[0-9]/, "Password must contain numbers"), // Password should have characters and numbers
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
