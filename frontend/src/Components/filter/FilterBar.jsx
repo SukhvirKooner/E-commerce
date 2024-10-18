@@ -28,7 +28,7 @@ const FilterBar = ({ onFilter }) => {
     };
 
     return (
-        <div className="filter-bar">
+        <div className="">
             
             <h5 className='subtext'>Filter by</h5>
             <div className="filter-section">
