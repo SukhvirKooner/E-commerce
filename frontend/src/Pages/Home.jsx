@@ -16,19 +16,19 @@ function Home() {
         window.scrollTo(0,0);
     };
     const product1 = () => {
-        navigate('/product/1');
+        navigate('/product/9');
         window.scrollTo(0,0);
     };
     const product2 = () => {
-        navigate('/product/2');
+        navigate('/product/10');
         window.scrollTo(0,0);
     };
     const product3 = () => {
-        navigate('/product/3');
+        navigate('/product/11');
         window.scrollTo(0,0);
     };
     const product4 = () => {
-        navigate('/product/4');
+        navigate('/product/12');
         window.scrollTo(0,0);
     };
     const custom = () => {
