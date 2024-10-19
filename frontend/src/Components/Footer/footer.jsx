@@ -1,4 +1,8 @@
 import React from 'react'
+import { FaInstagram } from "react-icons/fa";
+import { BsChatRight, BsTwitterX } from "react-icons/bs";
+
+
 import "./footer.css"
 function Footer() {
     return (
@@ -7,14 +11,14 @@ function Footer() {
             
         <div className="container container-1">
         <div className="column">
-        <p className='subtext'>123-456-7890</p>
-        <p className='subtext'>info@mysite.com</p>
+        <p className='subtext'>+91 8700016426</p>
+        <p className='subtext'>cyberforge1001@gmail.com</p>
         </div>
         <div className="column">
         <p className='subtext'>Delhi, India</p>
         </div>
         <div className="column">
-        <p></p>
+        <div className='footerlinks'><a className='links' style={{paddingRight:"50px"}} href="https://www.instagram.com/cyberforge/"><FaInstagram /></a><a className='links' href="https://x.com/CyberForgeS"><BsTwitterX /></a></div>
         </div>
         </div>
         <h1></h1>
