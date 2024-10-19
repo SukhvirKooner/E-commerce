@@ -15,7 +15,7 @@ function ChatGPTForm() {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:4000/get-custom-pc', {
+      const response = await axios.post('https://cyberforge1.onrender.com/get-custom-pc', {
         budget,
         usecase
       });

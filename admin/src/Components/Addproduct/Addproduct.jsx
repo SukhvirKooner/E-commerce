@@ -41,7 +41,7 @@ function Addproduct() {
 
         formData.append("product", image);
 
-        await fetch('http://localhost:4000/upload', {
+        await fetch('https://cyberforge1.onrender.com/upload', {
             method: "POST",
             headers: {
                 Accept: 'application/json',
@@ -53,7 +53,7 @@ function Addproduct() {
             product.image = responseData.image_url;
 
             console.log(product);
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://cyberforge1.onrender.com/addproduct', {
                 method: "POST",
                 headers: {
                     Accept: 'application/json',

@@ -5,7 +5,7 @@ function Listproduct() {
     const [allproducts,setAllproducts] = useState([]);
 
     const fetchInfo = async ()=>{
-        await fetch('http://localhost:4000/allproducts')
+        await fetch('https://cyberforge1.onrender.com/allproducts')
         .then((resp)=>resp.json())
         .then((data)=>{setAllproducts(data)});
     }
@@ -14,7 +14,7 @@ function Listproduct() {
 
     },[]);
     const remove_product = async (id)=>{
-        await fetch('http://localhost:4000/removeproduct',{
+        await fetch('https://cyberforge1.onrender.com/removeproduct',{
             method:"POST",
             headers:{
                 Accept:"application/json",

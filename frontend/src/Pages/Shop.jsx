@@ -18,7 +18,7 @@ function Shop() {
     const [init_products,setInit_Products]= useState([]) ;
 
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://cyberforge1.onrender.com/allproducts')
         .then((response)=>response.json())
         .then((data)=>{
             setInit_Products(data);

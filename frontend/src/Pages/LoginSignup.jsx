@@ -47,7 +47,7 @@ const LoginSignup = () => {
     if (validateForm()) {
       console.log("login executed", formData);
       let responseData;
-      await fetch('http://localhost:4000/login', {
+      await fetch('https://cyberforge1.onrender.com/login', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -70,7 +70,7 @@ const LoginSignup = () => {
     if (validateForm()) {
       console.log("signup executed", formData);
       let responseData;
-      await fetch('http://localhost:4000/signup', {
+      await fetch('https://cyberforge1.onrender.com/signup', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
