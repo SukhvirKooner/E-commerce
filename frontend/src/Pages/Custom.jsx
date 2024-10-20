@@ -39,7 +39,7 @@ function ChatGPTForm() {
       <h1 className='custom-title'>Custom PC Generator</h1>
       <form className='form-inline' onSubmit={handleSubmit}>
         <div className="form-group mb-3">
-          <label className='text' htmlFor="budget">Budget  ₹:</label>
+          <label className='text' htmlFor="budget">Budget  $:</label>
           <input
             type="number"
             id="budget"

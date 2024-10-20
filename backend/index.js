@@ -34,7 +34,7 @@ async function generateCustomPCComponents(budget, usecase) {
     try {
       const genAI = new GoogleGenerativeAI(process.env.API_KEY);
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-      const prompt = `Generate a list of PC components (CPU, GPU, motherboard, RAM, storage) suitable for a custom PC with a budget of ${budget} rupees and a primary use case of ${usecase}.`;
+      const prompt = `Generate a list of PC components (CPU, GPU, motherboard, RAM, storage) suitable for a custom PC with a budget of ${budget} dollars and a primary use case of ${usecase}.`;
       const result = await model.generateContent(prompt);
   
       // Handle empty responses (optional)
