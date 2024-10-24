@@ -217,7 +217,7 @@ app.post('/signup', async(req,res)=>{
     const user = new User({
         name: req.body.name,
         email:req.body.email,
-        password:req.body.password,
+        password:req.body.password, 
         cartData:cart,
     })
     await user.save();
@@ -245,11 +245,11 @@ app.post('/login',async (req,res)=>{
             res.json({success:true,token}); 
         }
         else{
-            res.json({success:"false",errors:"wrong password"})
+            res.json({success:false,errors:"wrong password" })
         }
     }
     else{
-        res.json({success:"false",errors:"wrong email ID"})
+        res.json({success:false,errors:"wrong email ID"})
 
         }
 })
